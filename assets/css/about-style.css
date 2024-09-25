@@ -1,0 +1,23 @@
+body{
+    background-color: #ffeb3b !important;
+}
+
+/* header section */
+header nav ul li{
+    list-style: none;
+}
+
+
+/* main section */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    background-color: #ffeb3b; /* カードの背景を少し暗くする */
+    color: #fff;
+    border: none;
+}
+.card-title {
+    color: #000; /* タイトルを黄色に */
+}
