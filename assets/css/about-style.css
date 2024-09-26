@@ -1,23 +1,104 @@
 body{
-    background-color: #ffeb3b !important;
+    background-color: #F3F3F3 !important;
+    font-family: Noto Sans JP, Hiragino Kaku Gothic ProN, Hiragino Kaku Gothic Pro, "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
 }
 
 /* header section */
-header nav ul li{
-    list-style: none;
-}
-
-
-/* main section */
-.carousel-item {
+.header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: rgba(193, 193, 193, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.card {
-    background-color: #ffeb3b; /* カードの背景を少し暗くする */
+
+.header nav ul li{
+    list-style: none;
+    float: left;
+    padding: 20px;
+}
+
+nav ul li a {
+    color: #ffeb3b; /* ナビゲーションメニューを黄色に */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b; /* 下線の色を黄色に */
+    color: #ffeb3b;
+    left: 0;
+    bottom: -5px; /* テキストの下に下線を表示 */
+    transition: width 0.3s ease; /* スムーズなアニメーション */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* ホバー時に下線が左から右へ展開 */
+}
+
+.header a{
+    text-decoration: none;
     color: #fff;
-    border: none;
 }
-.card-title {
-    color: #000; /* タイトルを黄色に */
+
+.main-video{
+    width: 100%;
+    filter: grayscale(100%)
+}
+
+/* Section */
+section{
+    text-align: center;
+}
+
+/* About */
+.about{
+    background-color: #ece1b7;
+    color: #000;
+}
+
+/* 自己紹介セクション */
+.intro-section {
+    width: 100%;
+    overflow: hidden; /* コンテナの外に出るテキストを隠す */
+    background-color: #000;
+    padding: 10px;
+}
+
+/* スライドショーコンテナ */
+.slideshow-container {
+    width: 100%;
+    white-space: nowrap; /* テキストを横一列に並べる */
+}
+
+/* スライドショーテキスト */
+.slideshow {
+    display: inline-block;
+    animation: scroll 15s linear infinite; /* 自動でテキストをスライド */
+}
+
+.slideshow span {
+    display: inline-block;
+    font-size: 24px;
+    color: #ffeb3b; /* 黄色いテキスト */
+    padding: 0 50px; /* 各キーワード間にスペースを確保 */
+    cursor: pointer;
+}
+
+/* アニメーション */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
