@@ -62,8 +62,6 @@ body, html {
     color: #fff;
 }
 
-
-
 /* セクションが表示される際のアニメーション */
 .show {
     opacity: 1;

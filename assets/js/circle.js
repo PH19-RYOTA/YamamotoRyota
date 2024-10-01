@@ -7,5 +7,16 @@ const circle = document.getElementById('clickable-circle');
         circle.style.transform = 'scale(40)'; // 円を拡大
         setTimeout(function() {
             window.location.href = 'about.html'; // about.htmlに遷移
-        }, 500); // 拡大が完了するまでの時間（500ms）を設定
+        }, 1000); // 拡大が完了するまでの時間（500ms）を設定
     });
+
+    function handleMobile() {
+        // 画面幅が768px以下の場合にのみ実行
+        if (window.innerWidth <= 768) {
+            loadingText.style.opacity = '0'; // テキストを非表示に
+            circle.style.transform = 'scale(40)'; // 円を拡大
+            setTimeout(function() {
+                window.location.href = 'about.html'; // about.htmlに遷移
+            },5000);
+            }
+        }
